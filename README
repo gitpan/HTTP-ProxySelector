@@ -1,7 +1,7 @@
 HTTP/ProxySelector version 0.01
 ===============================
 
-Automatically selects you an annonymous proxy for use of your UserAgent instance.
+Automatically selects you an anonymous proxy for use of your UserAgent instance.
 Just hand it your favorite proxy list site, or use the defaults. The package will then
 use your existing useragent instance to access the site and set it's proxy settings according
 to a random entry in the list.

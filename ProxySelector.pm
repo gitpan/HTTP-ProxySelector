@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use integer;
 use LWP::UserAgent;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 # rand() is used, let's try to make the most of it...
 srand;
@@ -34,7 +34,7 @@ sub new {
 	return $self;
 }
 
-# Accept an annoymous proxy
+# Accept an anonymous proxy
 sub set_proxy {
 	my ($self) = @_;
 	my ($counter, $rc) = (0,0);
@@ -93,7 +93,7 @@ __END__
 
 =head1 NAME
 
-HTTP::ProxySelector - Perl extension for automatically setting an annonymous proxy
+HTTP::ProxySelector - Perl extension for automatically setting an anonymous proxy
 
 =head1 SYNOPSIS
 
@@ -104,7 +104,7 @@ HTTP::ProxySelector - Perl extension for automatically setting an annonymous pro
   my $selector = HTTP::ProxySelector->new();
   my $ua = LWP::UserAgent->new();
 
-  # Assign an annonymous proxy to the UserAgent object.
+  # Assign an anonymous proxy to the UserAgent object.
   $selector->set_proxy($ua);
   
   # Just in case you need to know the chosen proxy
@@ -112,7 +112,7 @@ HTTP::ProxySelector - Perl extension for automatically setting an annonymous pro
 
 =head1 DESCRIPTION
 
-Automatically selects you an annonymous proxy for use of your UserAgent instance.
+Automatically selects you an anonymous proxy for use of your UserAgent instance.
 Just hand it your favorite proxy list site, or use the defaults. The package will then
 use your existing useragent instance to access the site and set it's proxy settings according
 to a random entry in the list.
@@ -155,11 +155,11 @@ Proxy testing
 				   Default - http://www.google.com
 
 
-=item B<set_proxy> - Assign annonymous proxy
+=item B<set_proxy> - Assign anonymous proxy
 
   $result = $select->set_proxy($useragent);
 	  
-Assign annonymous proxy to the useragent proxy
+Assign anonymous proxy to the useragent proxy
 
 Arguments:
 
